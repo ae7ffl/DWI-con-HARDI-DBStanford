@@ -1,0 +1,5 @@
+dipy>=1.9
+nibabel
+numpy
+matplotlib
+scikit-learn
