@@ -26,13 +26,9 @@ Outputs are written to `results/stanford_hardi/`.
 
 ## Results (Stanford HARDI)
 
-![DTI maps](figures/dti_maps.png)
-
 FA highlights the corpus callosum and major white-matter tracts, MD is highest in the
 ventricles (free water), and colour-FA shows the expected orientations (red: left–right,
 green: anterior–posterior, blue: superior–inferior).
-
-![Feature space](figures/fa_md_features.png)
 
 | Cluster | Voxels | Mean FA | Mean MD (x10⁻³ mm²/s) |
 |---|---|---|---|
