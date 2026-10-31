@@ -38,19 +38,16 @@ green: anterior–posterior, blue: superior–inferior).
 
 **Quality control.** A first run produced a "CSF" cluster of only 40 voxels with
 MD ≈ 74 mm²/s, which is physically impossible (free water ≈ 3.0 × 10⁻³ mm²/s at body
-temperature). 
-    These were voxels where the tensor fit failed (low signal /  artefacts) and they dominated the k-means.
+temperature). These were voxels where the tensor fit failed (low signal /  artefacts) and they dominated the k-means.
 
-    Voxels with MD ≥ 3.5 × 10⁻³ mm²/s are now excluded before clustering (442 voxels, 0.20 % of the brain mask).
+    Voxels with MD ≥ 3.5 × 10⁻³ mm²/s are now excluded before clustering.
 
-**Limitations.** K-means on two DTI features is only a rough tissue proxy: partial-volume voxels at tissue boundaries lower the mean MD of the CSF cluster, and a small group of noisy voxels (high FA with high MD, or FA ≈ 1 with MD ≈ 0, mostly at the mask edge) would need better masking, denoising (e.g. Patch2Self / MP-PCA) or a more robust fit (RESTORE).
+**Limitations.** K-means on two DTI features is only a rough tissue proxy. It's a beginning project made for an introduction to the field of DWI.
 
 ## Next steps
 
-- Denoise the DWI  and use a robust tensor fit (RESTORE).
-
+- Denoise the DWI.
 - Compare DTI with more advanced microstructure models (DKI, NODDI/free-water) available in DIPY.
-- Register the maps to a standard space (ANTs / FSL) for group-level statistics.
 - Replace k-means with supervised models trained on labelled tissue or patient groups.
 
 ## Author
